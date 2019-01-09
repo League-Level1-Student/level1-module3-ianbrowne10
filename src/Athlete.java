@@ -1,32 +1,42 @@
+import java.util.Set;
+
 public class Athlete {
 
-	static int nextBibNumber;
+	static int nextBibNumber = 1;
 	static String raceLocation = "New York";
 	static String raceStartTime = "9.00am";
 
 	String name;
 	int speed;
-	static int bibNumber;
+	int bibNumber;
 
 	Athlete(String name, int speed) {
 		this.name = name;
 		this.speed = speed;
-		for (int i = 0; i < 2; i++) {
-			System.out.println(bibNumber +=1);
-		}
+		this.bibNumber = nextBibNumber;
+	nextBibNumber += 1;
 	}
 
 	public static void main(String[] args) {
 		// create two athletes //print their names, bibNumbers, and the location of
 		// their race. }
-	Athlete("Bill", 7);
-		
+System.out.println(new	Athlete("Bill", 6 ));
+System.out.println(new	Athlete("Bob", 7 ));
+newRaceLocation("Los Angeles");
+System.out.println(new	Athlete("Bill", 6 ));
+System.out.println(new	Athlete("Bob", 7 ));
 	
-	Athlete("Bob", 9);
+
+	}
+	public String toString(){
+		return "In "+raceLocation + " athlete "+name + " is running with bib number "  +bibNumber;
+
+	}
+public static void newRaceLocation(String raceLocation) {
+	Athlete.raceLocation = raceLocation;
+	
+}
 	}
 
-	private static void Athlete(String string, int i) {
-		// TODO Auto-generated method stub
-		
-	}
-}
+
+
