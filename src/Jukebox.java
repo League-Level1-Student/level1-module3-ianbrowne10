@@ -11,7 +11,10 @@ import java.net.URL;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
 import javazoom.jl.player.advanced.AdvancedPlayer;
@@ -26,8 +29,23 @@ public class Jukebox implements Runnable {
 	}
 
            public void run() {
+Song Song1 = new Song("ACDC - Back In Black (Official Music Video).mp3");
+Song Song2 = new Song("ACDC - Thunderstruck (Official Music Video).mp3");
+JLabel lab = new JLabel();
+JFrame frame = new JFrame("Jukebox");
+JButton button = new JButton("Song 1");
+JButton button2 = new JButton("Song 2");	
+JPanel pan = new JPanel();
+frame.setVisible(true);
+frame.add(pan);
+pan.add(button);
+frame.pack();
+pan.add(button2);
+frame.pack();
+button.addActionListener(null);
+button2.addActionListener(null);
 
-		// 3. Find an mp3 on your computer or on the Internet.
+// 3. Find an mp3 on your computer or on the Internet.
 		// 4. Create a Song
 
 		// 5. Play the Song
