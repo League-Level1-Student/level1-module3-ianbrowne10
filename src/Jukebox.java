@@ -4,6 +4,8 @@
  */
 
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -22,10 +24,10 @@ import javazoom.jl.player.advanced.AdvancedPlayer;
 /* 1. Download the JavaZoom jar from here: http://bit.ly/javazoom
  * 2. Right click your project and add it as an External JAR (Under Java Build Path > Libraries).*/
 
-public class Jukebox implements Runnable {
+public class Jukebox implements ActionListener {
 
 	public static void main(String[] args) {
-		SwingUtilities.invokeLater(new Jukebox());
+		SwingUtilities.invokeLater((Runnable) new Jukebox());
 	}
 
            public void run() {
@@ -42,8 +44,9 @@ pan.add(button);
 frame.pack();
 pan.add(button2);
 frame.pack();
-button.addActionListener(null);
-button2.addActionListener(null);
+button.addActionListener(this);
+button2.addActionListener(this);
+
 
 // 3. Find an mp3 on your computer or on the Internet.
 		// 4. Create a Song
@@ -63,6 +66,12 @@ button2.addActionListener(null);
 		URL imageURL = getClass().getResource(fileName);
 		Icon icon = new ImageIcon(imageURL);
 		return new JLabel(icon);
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+	
 	}
 
 }
