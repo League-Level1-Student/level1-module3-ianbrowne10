@@ -33,8 +33,9 @@ public class MagicBox extends JPanel implements Runnable, MouseListener {
 	BufferedImage backgroundImage;
 
 	public static void main(String[] args) throws Exception {
+		System.out.println("a");
 		SwingUtilities.invokeLater(new MagicBox());
-	
+
 		
 		
 	}
@@ -72,19 +73,33 @@ public class MagicBox extends JPanel implements Runnable, MouseListener {
 	public void paintComponent(Graphics g) {
 		g.drawImage(backgroundImage, 0, 0, null);
 	}
-
+	MediaPalace palace = new MediaPalace();
+	
 	@Override
 	public void mouseClicked(MouseEvent e) {
+if(e.getX()>367&&e.getX()<418&&e.getY()>342&&e.getY()<378) {
+	palace.speak("Mr zee acquires shiny objects");
+}
+if(e.getX()>85&&e.getX()<120&&e.getY()>912&&e.getY()<931) { System.out.println("a");
+palace.loadSound("moo.wav").play();
+}
+
+/*x=367,y=342
+x=418,y=378
+x=85,y=912
+x=120,y=931
+x=254,y=677
+x=295,y=706*/
+
 		// TODO Auto-generated method stub
-		MediaPalace palace = new MediaPalace();
-		palace.speak("Hello");
+	
 	}
 
 	@Override
 	public void mousePressed(MouseEvent e) {
 		// TODO Auto-generated method stub
-		
-	}
+		System.out.println("x="+e.getX()+",y="+e.getY());
+		}
 
 	@Override
 	public void mouseReleased(MouseEvent e) {
