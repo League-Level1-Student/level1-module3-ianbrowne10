@@ -83,7 +83,13 @@ if(e.getX()>367&&e.getX()<418&&e.getY()>342&&e.getY()<378) {
 if(e.getX()>85&&e.getX()<120&&e.getY()>912&&e.getY()<931) { System.out.println("a");
 palace.loadSound("moo.wav").play();
 }
-
+if(e.getX()>254&&e.getX()<295&&e.getY()>677&&e.getY()<706) {
+	JFrame frame = new JFrame();
+	frame.add(palace.loadImageFromWithinProject("sheggy.jpg"));
+frame.setVisible(true);
+frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+frame.setBounds(300, 300, 300, 300);
+}
 /*x=367,y=342
 x=418,y=378
 x=85,y=912
