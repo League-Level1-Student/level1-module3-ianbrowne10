@@ -19,7 +19,8 @@ netflix.addMovie(movie2);
 netflix.addMovie(movie3);
 netflix.addMovie(movie4);
 netflix.printMovies();
-System.out.println(netflix.getBestMovie());
+System.out.println("The best movie is... "+netflix.getBestMovie());
+System.out.println("The second best movie is... "+netflix.getMovie(1));
 }
 
 }
